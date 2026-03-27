@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Fish Named Fred – Herrenmode Potsdam</title>
+  <meta name="description" content="A Fish Named Fred – Stilvolle Herrenmoden aus den Niederlanden. Jetzt in Potsdam, Brandenburger Straße. Entdecken Sie unsere exklusive Kollektion." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/main.css" />
+	<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="A fish named Fred - Potsdam" />
+	<link rel="manifest" href="/images/site.webmanifest" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="/index.html" class="nav__logo">
+        <img src="/images/logo_color.avif" alt="A Fish Named Fred" class="nav__logo-img" />
+      </a>
+
+      <ul class="nav__list" id="navList">
+        <li><a href="#home" class="nav__link active">Startseite</a></li>
+        <li><a href="#about" class="nav__link">Über uns</a></li>
+        <li><a href="#collections" class="nav__link">Kollektionen</a></li>
+        <li><a href="#gallery" class="nav__link">Galerie</a></li>
+        <li><a href="#contact" class="nav__link">Kontakt</a></li>
+      </ul>
+
+      <button class="nav__burger" id="navBurger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <button class="sidebar__close" id="sidebarClose" aria-label="Menü schließen">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul class="sidebar__list">
+      <li><a href="#home" class="sidebar__link"><i class="fa-solid fa-house"></i><span>Startseite</span></a></li>
+      <li><a href="#about" class="sidebar__link"><i class="fa-solid fa-circle-info"></i><span>Über uns</span></a></li>
+      <li><a href="#collections" class="sidebar__link"><i class="fa-solid fa-shirt"></i><span>Kollektionen</span></a></li>
+      <li><a href="#gallery" class="sidebar__link"><i class="fa-solid fa-images"></i><span>Galerie</span></a></li>
+      <li><a href="#contact" class="sidebar__link"><i class="fa-solid fa-location-dot"></i><span>Kontakt</span></a></li>
+    </ul>
+    <div class="sidebar__footer">
+      <div class="sidebar__social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+     
+    </div>
+  </div>
+  <div class="sidebar__overlay" id="sidebarOverlay"></div>
+
+  <section class="hero" id="home">
+    <div class="hero__carousel" id="heroCarousel">
+      <div class="hero__slide active" style="background-image: url('/images/2.png')"></div>
+      <div class="hero__slide" style="background-image: url('/images/1.png')"></div>
+      <div class="hero__slide" style="background-image: url('/images/3.png')"></div>
+      <div class="hero__slide" style="background-image: url('/images/4.png')"></div>
+    </div>
+
+    <div class="hero__overlay"></div>
+
+   
+    <div class="hero__content container">
+     
+      <h1 class="hero__title">A Fish<br /><em>Named Fred</em></h1><br>
+      <div class="hero__buttons">
+        <a href="#about" class="btn btn--outline-white">Mehr über uns</a>
+        <a href="#contact" class="btn btn--ghost-accent">Kontakt</a>
+      </div>
+    </div>
+
+    <div class="hero__bottom-bar">
+      <div class="hero__bottom-info">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Brandenburger Str. 66, 14467 Potsdam</span>
+        <span class="hero__bottom-sep">·</span>
+        <i class="fa-solid fa-clock"></i>
+        <span>Mo–Sa 10–18 Uhr </span>
+      </div>
+      <div class="hero__counter" id="heroCounter">
+        <span class="hero__counter-current" id="heroCounterCurrent">01</span>
+        <div class="hero__counter-track">
+          <div class="hero__counter-fill" id="heroCounterFill"></div>
+        </div>
+        <span class="hero__counter-total">04</span>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-line"></div>
+    </div>
+
+    <div class="hero__dots" id="heroDots" aria-hidden="true">
+      <button class="hero__dot active" data-index="0"></button>
+      <button class="hero__dot" data-index="1"></button>
+      <button class="hero__dot" data-index="2"></button>
+      <button class="hero__dot" data-index="3"></button>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Wer wir sind</span>
+        <h2 class="section__title">Über A Fish Named Fred</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal reveal--left">
+          <p class="about__lead">Eine Marke, die Persönlichkeit feiert.</p>
+          <p>A Fish Named Fred wurde 1993 in den Niederlanden gegründet und steht für lebendige, charakterstarke Herrenmoden. Hinter dem ungewöhnlichen Namen steckt eine einfache Botschaft: Sei keine graue Masse – sei ein Fish Named Fred.</p>
+          <p>Mit einem Sortiment, das von komfortabler Unterwäsche über farbenfrohe Hemden bis hin zu raffinierten Blazern reicht, bietet die Marke Mode für Männer, die wissen, wer sie sind – und das auch zeigen wollen.</p>
+          <p>Unsere Filiale in <strong>Potsdam</strong>, mitten in der belebten Brandenburger Straße, bringt diesen niederländischen Esprit direkt in das Herz Brandenburgs.</p>
+          <a href="#collections" class="btn btn--primary">Kollektion entdecken</a>
+        </div>
+
+        <div class="about__images reveal reveal--right">
+          <div class="about__img-main">
+            <img src="/images/6.png" alt="Stilvoller Mann in modischer Kleidung" loading="lazy" />
+          </div>
+          <div class="about__img-accent">
+            <img src="/images/5.png" alt="Herrenmoden Detail" loading="lazy" />
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="about__values">
+        <div class="about__value reveal">
+          <div class="about__value-icon"><i class="fa-solid fa-fish"></i></div>
+          <h3>Einzigartigkeit</h3>
+          <p>Kein anonymes Design – jedes Stück hat Charakter und erzählt eine Geschichte.</p>
+        </div>
+        <div class="about__value reveal">
+          <div class="about__value-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Qualität</h3>
+          <p>Hochwertige Materialien, sorgfältige Verarbeitung – Mode, die hält, was sie verspricht.</p>
+        </div>
+        <div class="about__value reveal">
+          <div class="about__value-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Stil</h3>
+          <p>Von casual bis elegant: Outfits für jeden Anlass und jeden Mann, der Stil lebt.</p>
+        </div>
+        <div class="about__value reveal">
+          <div class="about__value-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Nachhaltigkeit</h3>
+          <p>Bewusstes Design mit Blick auf Mensch und Umwelt – Mode mit Verantwortung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections section section--alt" id="collections">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Unsere Auswahl</span>
+        <h2 class="section__title">Kollektionen</h2>
+        <div class="section__line"></div>
+        <p class="section__desc">Entdecken Sie unsere sorgfältig zusammengestellten Kollektionen – von lässig-entspannt bis elegant-formell.</p>
+      </div>
+    </div>
+
+    <div class="swiper collections__swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide collection__card">
+          <div class="collection__img-wrap">
+            <img src="/images/s26.webp" alt="Klassische Blazer" loading="lazy" />
+            <div class="collection__img-overlay">
+              <a href="#contact" class="btn btn--white-sm">Im Laden ansehen</a>
+            </div>
+          </div>
+          <div class="collection__info">
+            <span class="collection__tag">Kollektion</span>
+            <h3 class="collection__title">Spring/Summer 2026</h3>
+            <p class="collection__desc">Entdecke die neuesten Kollektionen für die Frühjahrs- und Sommerzeit.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection__card">
+          <div class="collection__img-wrap">
+            <img src="/images/cas.webp" alt="Hemden Kollektion" loading="lazy" />
+            <div class="collection__img-overlay">
+              <a href="#contact" class="btn btn--white-sm">Im Laden ansehen</a>
+            </div>
+						
+          </div>
+          <div class="collection__info">
+            <span class="collection__tag">Casual</span>
+            <h3 class="collection__title">Printed Shirts</h3>
+            <p class="collection__desc">Charakterstarke Hemden mit lebendigen Mustern – der Signature-Look von Fred.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection__card">
+          <div class="collection__img-wrap">
+            <img src="/images/sm.webp" alt="City Look Kollektion" loading="lazy" />
+            <div class="collection__img-overlay">
+              <a href="#contact" class="btn btn--white-sm">Im Laden ansehen</a>
+            </div>
+          </div>
+          <div class="collection__info">
+            <span class="collection__tag">Smart Casual</span>
+            <h3 class="collection__title">City Look</h3>
+            <p class="collection__desc">Urban und stylisch – die perfekte Kombination aus Komfort und Eleganz für den Alltag.</p>
+          </div>
+        </div>
+<!-- Weitere Kollektionen hier... 
+        <div class="swiper-slide collection__card">
+          <div class="collection__img-wrap">
+            <img src="https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Essentials Kollektion" loading="lazy" />
+            <div class="collection__img-overlay">
+              <a href="#contact" class="btn btn--white-sm">Im Laden ansehen</a>
+            </div>
+          </div>
+          <div class="collection__info">
+            <span class="collection__tag">Essentials</span>
+            <h3 class="collection__title">Basic &amp; Bold</h3>
+            <p class="collection__desc">Zeitlose Basics mit dem gewissen Extra – Qualitäts-Essentials für jede Garderobe.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection__card">
+          <div class="collection__img-wrap">
+            <img src="https://images.pexels.com/photos/2220316/pexels-photo-2220316.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Underwear Kollektion" loading="lazy" />
+            <div class="collection__img-overlay">
+              <a href="#contact" class="btn btn--white-sm">Im Laden ansehen</a>
+            </div>
+          </div>
+          <div class="collection__info">
+            <span class="collection__tag">Underwear</span>
+            <h3 class="collection__title">Comfort First</h3>
+            <p class="collection__desc">Hochwertige Unterwäsche mit Stil – weil gutes Gefühl von innen beginnt.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection__card">
+          <div class="collection__img-wrap">
+            <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Accessoires" loading="lazy" />
+            <div class="collection__img-overlay">
+              <a href="#contact" class="btn btn--white-sm">Im Laden ansehen</a>
+            </div>
+          </div>
+          <div class="collection__info">
+            <span class="collection__tag">Accessoires</span>
+            <h3 class="collection__title">Das gewisse Extra</h3>
+            <p class="collection__desc">Accessoires, die Outfits vervollständigen – Gürtel, Socken, Schals und mehr.</p>
+          </div>
+        </div>
+				-->
+
+      </div>
+      <div class="swiper-button-next collections__next"></div>
+      <div class="swiper-button-prev collections__prev"></div>
+      <div class="swiper-pagination collections__pagination"></div>
+    </div>
+
+    <div class="collections__hint reveal">
+      <i class="fa-solid fa-hand-pointer"></i>
+      <span>Zum Scrollen ziehen oder wischen</span>
+    </div>
+  </section>
+
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Impressionen</span>
+        <h2 class="section__title">Galerie</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--lg reveal">
+          <img src="/images/1.png" alt="Fashion Look 1" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery__item reveal">
+          <img src="/images/2.png" alt="Fashion Look 2" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery__item reveal">
+          <img src="/images/3.png" alt="Fashion Look 3" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery__item gallery__item--md reveal">
+          <img src="/images/4.png" alt="Fashion Look 4" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery__item gallery__item--md reveal">
+          <img src="/images/5.png" alt="Fashion Look 5" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery__item reveal">
+          <img src="/images/6.png" alt="Fashion Look 6" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+				<div class="gallery__item reveal">
+          <img src="/images/7.png" alt="Fashion Look 6" loading="lazy" />
+          <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Schließen"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Vorheriges Bild"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Nächstes Bild"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox__content">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+    <div class="lightbox__counter" id="lightboxCounter"></div>
+  </div>
+
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Besuchen Sie uns</span>
+        <h2 class="section__title">Kontakt &amp; Anfahrt</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal reveal--left">
+          <div class="contact__card">
+            <div class="contact__icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact__detail">
+              <h4>Adresse</h4>
+              <p>Brandenburger Str. 66<br />14467 Potsdam</p>
+            </div>
+          </div>
+
+          <div class="contact__card">
+            <div class="contact__icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="contact__detail">
+              <h4>Öffnungszeiten</h4>
+              <table class="contact__hours">
+                <tr><td>Montag – Samstag</td><td>10:00 – 18:00 Uhr</td></tr>
+                <tr><td>Sonntag</td><td class="closed">Geschlossen</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="contact__card">
+            <div class="contact__icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact__detail">
+              <h4>Telefon</h4>
+              <a href="tel:033181722095" class="contact__link">0331 81722095</a>
+            </div>
+          </div>
+
+          <div class="contact__social-row">
+            <span>Folgen Sie uns:</span>
+            <div class="contact__social-links">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__map reveal reveal--right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4868.7475527057195!2d13.0497873!3d52.3999017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f5acdaf6650d%3A0x69ae747e11b6f34e!2sA%20fish%20named%20Fred%20-%20Potsdam!5e0!3m2!1sde!2sde!4v1774632977271!5m2!1sde!2sde"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="A Fish Named Fred Potsdam – Standort auf Google Maps"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__top container">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="/images/logo_color.avif" alt="A Fish Named Fred" class="footer__logo-img" />
+        </a>
+        <p class="footer__slogan">Sei kein gewöhnlicher Fisch.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__nav">
+        <h4 class="footer__heading">Navigation</h4>
+        <ul>
+          <li><a href="#home">Startseite</a></li>
+          <li><a href="#about">Über uns</a></li>
+          <li><a href="#collections">Kollektionen</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__legal">
+        <h4 class="footer__heading">Rechtliches</h4>
+        <ul>
+          <li><a href="/imprint.html">Impressum</a></li>
+          <li><a href="/privacy.html">Datenschutzerklärung</a></li>
+          <li><a href="/cookie-policy.html">Cookie-Richtlinien</a></li>
+        </ul>
+        <div class="footer__address">
+          <p><i class="fa-solid fa-location-dot"></i> Brandenburger Straße 66, 14467 Potsdam</p>
+          <p><i class="fa-solid fa-phone"></i>0331 81722095</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>&copy; 2026 A Fish Named Fred Potsdam.</p>
+			 <p class="credit">Réalisé par
+                    <a href="https://huhpact.dev?utm_source=afishnamedfred&utm_medium=webbrowser&utm_campaign=afishnamedfred">
+                        <img class="img__credit" src="https://huhpact.dev/images/G89WG6majMo4HT1WtrS4AfxE7BZj2yWS.png" alt="huh(pact)">
+                    </a>
+                </p>
+     
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-Hinweis">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <div>
+          <strong>Wir verwenden Cookies</strong>
+          <p>Diese Website verwendet Cookies, um Ihr Erlebnis zu verbessern. <a href="cookie-richtlinien.html">Mehr erfahren</a></p>
+        </div>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="btn btn--cookie-settings" id="cookieSettings">Einstellungen</button>
+        <button class="btn btn--cookie-accept" id="cookieAccept">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-modal__overlay" id="cookieModalOverlay"></div>
+  <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+    <button class="cookie-modal__close" id="cookieModalClose" aria-label="Schließen"><i class="fa-solid fa-xmark"></i></button>
+    <h3>Cookie-Einstellungen</h3>
+    <p>Passen Sie Ihre Cookie-Präferenzen an. Notwendige Cookies können nicht deaktiviert werden.</p>
+
+    <div class="cookie-modal__options">
+      <div class="cookie-option">
+        <div class="cookie-option__info">
+          <h4>Notwendige Cookies</h4>
+          <p>Essenziell für die Funktion der Website. Immer aktiv.</p>
+        </div>
+        <label class="toggle toggle--disabled">
+          <input type="checkbox" checked disabled />
+          <span class="toggle__slider"></span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <div class="cookie-option__info">
+          <h4>Analyse-Cookies</h4>
+          <p>Helfen uns, die Nutzung der Website besser zu verstehen.</p>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="analyticsToggle" />
+          <span class="toggle__slider"></span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <div class="cookie-option__info">
+          <h4>Marketing-Cookies</h4>
+          <p>Werden für personalisierte Werbung genutzt.</p>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="marketingToggle" />
+          <span class="toggle__slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="cookie-modal__footer">
+      <button class="btn btn--cookie-settings" id="cookieSaveSettings">Auswahl speichern</button>
+      <button class="btn btn--cookie-accept" id="cookieAcceptAll">Alle akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
