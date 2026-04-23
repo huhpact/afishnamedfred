@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── About values accordion ──────────────────────────────────────────────
+  document.querySelectorAll('[data-accordion] .about__value-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('[data-accordion]');
+      const isOpen = item.classList.contains('is-open');
+      // Close all
+      document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('is-open'));
+      // Toggle clicked
+      if (!isOpen) item.classList.add('is-open');
+    });
+  });
+
   const header = document.getElementById('header');
   const onScroll = () => {
     if (window.scrollY > 50) {
