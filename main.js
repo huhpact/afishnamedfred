@@ -1,14 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── About values accordion ──────────────────────────────────────────────
+  const allAccordions = Array.from(document.querySelectorAll('[data-accordion]'));
+
   document.querySelectorAll('[data-accordion] .about__value-header').forEach(header => {
     header.addEventListener('click', () => {
       const item = header.closest('[data-accordion]');
-      const isOpen = item.classList.contains('is-open');
-      // Close all
-      document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('is-open'));
-      // Toggle clicked
-      if (!isOpen) item.classList.add('is-open');
+      const isDesktop = window.innerWidth >= 769;
+
+      if (isDesktop) {
+        const idx = allAccordions.indexOf(item);
+        const rowStart = Math.floor(idx / 2) * 2;
+        const rowItems = allAccordions.slice(rowStart, rowStart + 2);
+
+        const rowIsOpen = rowItems.some(el => el.classList.contains('is-open'));
+
+        allAccordions.forEach(el => el.classList.remove('is-open'));
+        if (!rowIsOpen) {
+          rowItems.forEach(el => el.classList.add('is-open'));
+        }
+      } else {
+        const isOpen = item.classList.contains('is-open');
+        allAccordions.forEach(el => el.classList.remove('is-open'));
+        if (!isOpen) item.classList.add('is-open');
+      }
     });
   });
 

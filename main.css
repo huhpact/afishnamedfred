@@ -744,7 +744,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 
 .about__values {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -760,7 +760,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   border-color: var(--clr-btn);
 }
 
-/* Accordion header – always visible */
 .about__value-header {
   display: flex;
   align-items: center;
@@ -800,14 +799,33 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .about__value.is-open .about__value-chevron { transform: rotate(180deg); }
 
 .about__value-body {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height .38s cubic-bezier(.4,0,.2,1), padding .38s cubic-bezier(.4,0,.2,1);
+  transition: max-height .42s cubic-bezier(.4,0,.2,1), padding .42s cubic-bezier(.4,0,.2,1);
   padding: 0 1.25rem;
 }
+
+.about__value-body p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  transition: -webkit-line-clamp 0s;
+}
+
+.about__value-body {
+  max-height: 4.5em; 
+  padding: 0 1.25rem .85rem;
+}
+
 .about__value.is-open .about__value-body {
-  max-height: 800px; 
+  max-height: 800px;
   padding: 0 1.25rem 1.25rem;
+}
+
+.about__value.is-open .about__value-body p {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  display: block;
 }
 
 .about__value p { font-size: .87rem; color: var(--clr-text-mid); line-height: 1.65; margin: 0; }
@@ -1497,7 +1515,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 
 
 @media (max-width: 1200px) {
-  .about__values { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 992px) {
@@ -1554,7 +1571,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 
   .footer__bottom { flex-direction: column; text-align: center; }
 
-  .lightbox__prev { left: .75rem; }
+  .lisghtbox__prev { left: .75rem; }
   .lightbox__next { right: .75rem; }
 }
 
